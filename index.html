@@ -1,178 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Дом Опеки </title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header, footer {
-      background: #4a90e2;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    header img {
-      max-width: 120px;
-      display: block;
-      margin: 0 auto 1rem;
-	 border-radius: 8px;
-    }
-    nav {
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      background: white;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    section img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 1rem;
-      border-radius: 8px;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .contact {
-      background: #eef6ff;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #4a90e2;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 1rem;
-    }
-
-    /* Адаптивность */
-    @media (max-width: 768px) {
-      body {
-        font-size: 16px;
-      }
-      main {
-        padding: 1rem;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.25rem;
-      }
-      .button {
-        width: 100%;
-        text-align: center;
-      }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.25rem;
-      }
-      h2 {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Дом Опеки</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Логотип Дом Опеки">
-    <h1>Дом Опеки </h1>
-    <p>Тепло. Забота. Уважение.</p>
-    
+
+<header>
+  <img src="logo.png" alt="Логотип Дом Опеки" class="logo">
+  <h1>Дом Опеки</h1>
+  <p class="slogan">Тепло. Забота. Уважение.</p>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div><div></div><div></div>
+  </div>
+</header>
+
 <nav>
-  <a href="index.html">Главная</a>
-  <a href="gallery.html">Галерея</a>
-  <a href="contacts.html">Контакты</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Главная</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
 </nav>
-  </header>
-  <main>
-    <section>
-      <h2>О нас</h2>
-      <p>Мы предлагаем профессиональный уход и домашнюю атмосферу для пожилых людей. Наши подопечные получают всё необходимое для комфортной, безопасной и достойной жизни.</p>
-      <img src="zn.jpg" alt="Фото о нас">
-    </section>
 
-    <section>
-      <h2>Условия проживания</h2>
-      <ul>
-        <li>Просторные 1- и 2-местные комнаты</li>
-        <li>Уютная атмосфера, адаптация под нужды пожилых людей</li>
-        <li>Собственная территория с местами для прогулок</li>
-      </ul>
-      <img src="cc.jpg" alt="Комнаты и территория">
-    </section>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
-    <section>
-      <h2>Повышенное внимание персонала</h2>
-      <ul>
-        <li>Круглосуточный уход и поддержка</li>
-        <li>Помощь в гигиене, питании, передвижении</li>
-        <li>Контроль приёма лекарств</li>
-        <li>Индивидуальный подход и душевная поддержка</li>
-        <li>Работа с людьми с деменцией и нарушениями памяти</li>
-      </ul>
-    </section>
+<main>
+  <section>
+    <h2>О нас</h2>
+    <p>Мы предлагаем профессиональный уход и домашнюю атмосферу для пожилых людей. Наши подопечные получают всё необходимое для комфортной, безопасной и достойной жизни.</p>
+    <img src="zn.jpg" alt="Фото о нас">
+  </section>
 
-    <section>
-      <h2>Питание</h2>
-      <p>Сбалансированное 4-разовое питание с учётом диет и предпочтений. Домашняя кухня, свежие продукты, внимательное отношение к каждому гостю.</p>
-    </section>
+  <section>
+    <h2>Условия проживания</h2>
+    <p>Просторные 1- и 2-местные комнаты, уютная атмосфера, адаптация под нужды пожилых людей и собственная территория с местами для прогулок.</p>
+    <img src="cc.jpg" alt="Комнаты и территория">
+  </section>
 
-    <section>
-      <h2>Досуг и общение</h2>
-      <ul>
-        <li>Арт-терапия, игры, чтение, кино</li>
-        <li>Праздники и выступления</li>
-        <li>Прогулки, занятия ЛФК</li>
-        <li>Общение с психологом</li>
-      </ul>
-      <img src="sport.jpg" alt="Занятия и досуг">
-    </section>
+  <section>
+    <h2>Повышенное внимание персонала</h2>
+    <p>Круглосуточный уход и поддержка, помощь в гигиене, питании и передвижении. Контроль приёма лекарств, индивидуальный подход и душевная поддержка. Работа с людьми с деменцией и нарушениями памяти.</p>
+  </section>
 
-    <section class="contact" id="contacts">
-      <h2>Контакты</h2>
-      <p><strong>Адрес:</strong> г. Кременчуг, ул. Леонова, 12</p>
-      <p><strong>Телефон:</strong> +38 (095)426 77 89</p>
-      <p><strong>Email:</strong> domzabotykrm@gmail.com</p>
-      <p><strong>Время работы:</strong> ежедневно с 09:00 до 18:00</p>
-      <a href="tel:0954267789" class="button">Позвонить</a>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Дом Опеки, Кременчуг</p>
-  </footer>
+  <section>
+    <h2>Питание</h2>
+    <p>Сбалансированное 4-разовое питание с учётом диет и предпочтений. Домашняя кухня, свежие продукты, внимательное отношение к каждому гостю.</p>
+  </section>
+
+  <section>
+    <h2>Досуг и общение</h2>
+    <p>Арт-терапия, игры, чтение, кино, праздники и выступления, прогулки, занятия ЛФК, общение с психологом.</p>
+    <img src="sport.jpg" alt="Занятия и досуг">
+  </section>
+
+  <section class="contact" id="contacts">
+    <h2>Контакты</h2>
+    <p><strong>Адрес:</strong> г. Кременчуг, ул. Теплая, 12</p>
+    <p><strong>Телефон:</strong> +38 (095)426 77 89</p>
+    <p><strong>Email:</strong> domzabotykrm@gmail.com</p>
+    <p><strong>Время работы:</strong> ежедневно с 09:00 до 18:00</p>
+    <a href="tel:0954267789" class="button">Позвонить</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Дом Опеки, Кременчуг</p>
+</footer>
+
 </body>
 </html>
-

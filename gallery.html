@@ -1,80 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Галерея — Дом Опеки</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0 2rem;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header, footer {
-      background: #4a90e2;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    header img {
-      max-width: 100px;
-      display: block;
-      margin: 0 auto 0.5rem;
-    }
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      text-align: center;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin: 1rem 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 0 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Дом Опеки Логотип" />
-    <h1>Дом Опеки</h1>
-    <p>Тепло. Забота. Уважение.</p>
+
+<header>
+  <img src="logo.png" alt="Логотип Дом Опеки" class="logo">
+  <h1>Дом Опеки</h1>
+  <p class="slogan">Тепло. Забота. Уважение.</p>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
 <nav>
-  <a href="index.html">Главная</a>
-  <a href="gallery.html">Галерея</a>
-  <a href="contacts.html">Контакты</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Главная</a>
+    <a href="gallery.html">Галерея</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
 </nav>
-  </header>
-  <main>
-    <p>Добро пожаловать в нашу фотогалерею! Здесь вы можете увидеть условия проживания.</p>
-    
-    <img src="room3.jpg" alt="Комната 3" />
-    <img src="room2.jpg" alt="Комната 2" />
-    <img src="room1.jpg" alt="Комната 1" />
-    <img src="garden.jpg" alt="Сад и прогулочная зона" />
-    <img src="room4.jpg" alt="Комната 4" />
-    <img src="room5.jpg" alt="Комната 5" />
-    <img src="room6.jpg" alt="Комната 6" />
+<script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
+
+<main>
+
+<p>Добро пожаловать в нашу фотогалерею! Здесь вы можете увидеть условия проживания.</p>
+<img src="room3.jpg" alt="Комната 3" />
+<img src="room2.jpg" alt="Комната 2" />
+<img src="room1.jpg" alt="Комната 1" />
+<img src="garden.jpg" alt="Сад и прогулочная зона" />
+<img src="room4.jpg" alt="Комната 4" />
+<img src="room5.jpg" alt="Комната 5" />
+<img src="room6.jpg" alt="Комната 6" />
+
+</main>
+<footer>
+  <p>&copy; 2025 Дом Опеки, Кременчуг</p>
+</footer>
+</body>
+</html>

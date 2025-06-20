@@ -4,56 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакты — Дом Опеки</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
- header img {
-      max-width: 100px;
-      display: block;
-      margin: 0 auto 0.5rem;
-    }
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; }
-    header, footer { background: #4a90e2; color: black; text-align: center; padding: 1rem; }
-    main { max-width: 800px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; }
-    .contact { background: #eef6ff; padding: 1rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem; }
-    .contact-content { flex: 1; }
-    .contact img.logo { width: 80px; height: auto; border-radius: 8px; }
-    a.button { display: inline-block; padding: 0.5rem 1rem; background: #4a90e2; color: white; text-decoration: none; border-radius: 4px; margin-top: 1rem; }
-    nav { text-align: center; margin: 1rem 0; }
-    nav a { margin: 0 1rem; color: #4a90e2; text-decoration: none; font-weight: bold; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
- <img src="logo.png" alt="Логотип" class="logo">
-    <h1>Дом Опеки</h1>
-   <p>Тепло. Забота. Уважение.</p>
-  </header>
 
-  <nav>
+<header>
+  <img src="logo.png" alt="Логотип Дом Опеки" class="logo">
+  <h1>Дом Опеки</h1>
+  <p class="slogan">Тепло. Забота. Уважение.</p>
+  <div class="burger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</header>
+<nav>
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Главная</a>
     <a href="gallery.html">Галерея</a>
     <a href="contacts.html">Контакты</a>
-  </nav>
+  </div>
+</nav>
+<script>
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
 
-  <main>
-    <section class="contact">
-     
-      <div class="contact-content">
-        <h2>Контакты</h2>
-        <p><strong>Адрес:</strong> г. Кременчуг, ул. Руфа, 12</p>
-        <p><strong>Телефон:</strong> +38 (095) 426 77 89</p>
-<a class="button" href="tel: 0954267789">Позвонить</a>
-        <p><strong>Email:</strong> domzabotykrm@gmail.com</p>
-        <p><strong>Время работы:</strong> ежедневно с 09:00 до 18:00</p>
-        
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d653.4406335793896!2d33.43118126922989!3d49.07214835366007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d753170dacb1ad%3A0x4047fee8a2376516!2zMTBBLCDRg9C7LiDQm9C10L7QvdC-0LLQsCwgMTDQkCwg0JrRgNC10LzQtdC90YfRg9CzLCDQn9C-0LvRgtCw0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMzk2MDA!5e0!3m2!1sru!2sua!4v1750318396718!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
+<main>
 
-  <footer>
-    <p>&copy; 2025 Дом Опеки, Кременчуг</p>
-  </footer>
+<section class="contact-content">
+  <h2>Контакты</h2>
+  <p><strong>Адрес:</strong> г. Кременчуг, ул. Руфа, 12</p>
+  <p><strong>Телефон:</strong> +38 (095) 426 77 89</p>
+  <a class="button" href="tel:0954267789">Позвонить</a>
+  <p><strong>Email:</strong> domzabotykrm@gmail.com</p>
+  <p><strong>Время работы:</strong> ежедневно с 09:00 до 18:00</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d653.4406335793896!2d33.43118126922989!3d49.07214835366007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d753170dacb1ad%3A0x4047fee8a2376516!2zMTBBLCDRg9C7LiDQm9C10L7QvdC-0LLQsCwgMTDQkCwg0JrRgNC10LzQtdC90YfRg9CzLCDQn9C-0LvRgtCw0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMzk2MDA!5e0!3m2!1sru!2sua!4v1750318396718!5m2!1sru!2sua"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+</main>
+<footer>
+  <p>&copy; 2025 Дом Опеки, Кременчуг</p>
+</footer>
 </body>
 </html>
-
